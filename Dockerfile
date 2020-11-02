@@ -21,9 +21,7 @@ RUN	apt-get -y install htop aria2 nmap traceroute
 # 3) install packages
 RUN pip install --no-cache-dir networkx scipy python-louvain geopandas babypandas
 
-# 4) change back to notebook user
-COPY /run_jupyter.sh /
-USER $NB_UID
+
 
 # Override command to disable running jupyter notebook at launch
-# CMD ["/bin/bash"]
+CMD ["/bin/bash"]
