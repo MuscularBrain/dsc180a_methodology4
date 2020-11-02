@@ -16,7 +16,7 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 # 2) change to root to install packages
 USER root
 
-RUN	apt-get install htop aria2 nmap traceroute
+RUN	apt-get -y install htop aria2 nmap traceroute
 
 # 3) install packages
 RUN pip install --no-cache-dir networkx scipy python-louvain geopandas babypandas
